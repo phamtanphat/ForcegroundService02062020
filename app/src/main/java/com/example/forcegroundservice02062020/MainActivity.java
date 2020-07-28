@@ -1,7 +1,9 @@
 package com.example.forcegroundservice02062020;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,MyForegrounService.class);
-                startService(intent);
+                ContextCompat.startForegroundService(MainActivity.this,intent);
             }
         });
     }
