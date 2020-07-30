@@ -42,6 +42,7 @@ public class MyForegrounService extends Service {
                         .getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
 
                 notificationManager.notify(1, notify.build());
+                new Handler().postDelayed(this , 1000);
             }
         },1000);
         return START_REDELIVER_INTENT;
